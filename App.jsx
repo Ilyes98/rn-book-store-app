@@ -1,26 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, LogBox, Text, View } from 'react-native';
+import { Body } from './components/Body';
+import { Header } from './components/Header';
 import { COLORS } from './constants/theme';
+import { styles } from './css/styles';
 
 // Hide Error FlatList using inside ScrollView
 LogBox.ignoreLogs(['VirtualizedLists']);
 
-
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Header />
+      <Body />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.black,
-    paddingTop : 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
