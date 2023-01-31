@@ -1,7 +1,7 @@
 import { books } from "./books";
 
 
-export const categories = [
+export const categoriesData = [
   {
     id: 1,
     categoryName: 'Best Seller',
