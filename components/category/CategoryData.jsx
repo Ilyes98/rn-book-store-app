@@ -7,7 +7,6 @@ import { categoriesData } from "../../data/categories"
 export default function CategoryData() {
     var books = []
     const [selectedCategory, setSelectedCategory] = React.useState(1);
-
     let selectedCategoryBooks = categoriesData.filter(a => a.id == selectedCategory)
 
     if (selectedCategoryBooks.length > 0) {
