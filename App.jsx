@@ -8,8 +8,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header />
-  <BookSection />
-  <Body />
+      <Body />
   </View>
   );
 }

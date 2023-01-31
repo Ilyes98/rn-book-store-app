@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
   button: {
     paddingHorizontal: 8,
     paddingVertical: 6,
-    borderRadius: 15,
+    borderRadius: 20,
     backgroundColor: COLORS.primary,
     marginHorizontal: '1%',
     marginBottom: 6,
@@ -50,8 +50,7 @@ export const styles = StyleSheet.create({
   plusIcon: {
     width: 25,
     height: 25,
-    opacity: 0.7,
-    backgroundColor: COLORS.gray1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
     marginRight: 5,
     borderRadius: 15,
     resizeMode: 'cover',
