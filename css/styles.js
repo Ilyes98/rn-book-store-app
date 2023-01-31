@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     paddingTop: 10,
   },
   header: {
-    height: 220,
+    height: 230,
     backgroundColor: COLORS.primary,
     paddingTop: 40,
     alignItems: 'center',

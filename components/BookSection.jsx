@@ -1,21 +1,35 @@
-import { Button, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Button, FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { myBooks } from '../data/myBooks'
 import Book from './Book'
+import { COLORS, FONTS, SIZES } from '../constants'
+import { books } from '../data'
 
 export default function BookSection() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>My books</Text>
-        <Button title='See more' />
-      </View>
-      <ScrollView horizontal>
-        {myBooks.map((book, index) => (
-          <Book key={index} book={book} />
-        ))}
-      </ScrollView>
+    <View style={{ flex: 1 }}>
+    {/* Header */}
+    <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ ...FONTS.h2, color: COLORS.white }}>My Book</Text>
+
+        <TouchableOpacity
+            onPress={() => console.log("See More")}
+        >
+            <Text style={{ ...FONTS.body3, color: COLORS.lightGray, alignSelf: 'flex-start', textDecorationLine: 'underline' }}>see more</Text>
+        </TouchableOpacity>
     </View>
+
+    {/* Books */}
+    <View style={{ flex: 1, marginTop: SIZES.padding }}>
+        <FlatList
+            data={myBooks}
+            renderItem={Book}
+            keyExtractor={item => `${item.id}`}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+        />
+    </View>
+</View>
   )
 }
 

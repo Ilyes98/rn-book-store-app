@@ -7,15 +7,17 @@ import CategoryData from './category/CategoryData';
 
 
 export default function CategorySection() {
+    const [selectedCategory, setSelectedCategory] = React.useState(1);
 
     return (
         <>
             <View style={{ marginTop: SIZES.padding }}>
                 <View>
-                    <CategoryHeader />
+                    <CategoryHeader selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}
+                    />
                 </View>
                 <View>
-                    <CategoryData />
+                    <CategoryData selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
                 </View>
             </View>
         </>

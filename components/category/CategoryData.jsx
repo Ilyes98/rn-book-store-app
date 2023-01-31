@@ -4,9 +4,9 @@ import { COLORS, FONTS, icons, SIZES } from "../../constants"
 import { myBooks } from "../../data";
 import { categoriesData } from "../../data/categories"
 
-export default function CategoryData() {
+export default function CategoryData({selectedCategory, setSelectedCategory}) {
     var books = []
-    const [selectedCategory, setSelectedCategory] = React.useState(1);
+    
     let selectedCategoryBooks = categoriesData.filter(a => a.id == selectedCategory)
 
     if (selectedCategoryBooks.length > 0) {

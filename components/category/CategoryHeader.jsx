@@ -3,10 +3,10 @@ import { FlatList, Text, TouchableOpacity, View } from "react-native"
 import { COLORS, FONTS, SIZES } from "../../constants"
 import { categoriesData } from "../../data/categories"
 
-export default function CategoryHeader() {
-    const [selectedCategory, setSelectedCategory] = React.useState(1);
+export default function CategoryHeader({selectedCategory, setSelectedCategory}) {
 
-const RenderItem = ({ item }) => {
+
+const renderItem = ({ item }) => {
     return (
         <TouchableOpacity
             style={{ flex: 1, marginRight: SIZES.padding }}
@@ -29,7 +29,7 @@ return (
         <FlatList
             data={categoriesData}
             showsHorizontalScrollIndicator={false}
-            renderItem={RenderItem}
+            renderItem={renderItem}
             keyExtractor={item => `${item.id}`}
             horizontal
         />

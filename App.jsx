@@ -6,16 +6,17 @@ import { useFonts } from 'expo-font';
 
 export default function App() {
 
-  useFonts({
-    "Roboto-Black" : require('./assets/fonts/Roboto-Black.ttf'),
-    "Roboto-Bold" : require('./assets/fonts/Roboto-Bold.ttf'),
-    "Roboto-Regular" : require('./assets/fonts/Roboto-Regular.ttf'),
+  const [loadFonts] = useFonts({
+    "Roboto-Black": require('./assets/fonts/Roboto-Black.ttf'),
+    "Roboto-Bold": require('./assets/fonts/Roboto-Bold.ttf'),
+    "Roboto-Regular": require('./assets/fonts/Roboto-Regular.ttf'),
   })
-
+  if (!loadFonts) return null;
+  
   return (
     <View style={styles.container}>
       <Header />
       <Body />
-  </View>
+    </View>
   );
 }
