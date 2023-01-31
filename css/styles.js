@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     paddingTop: 10,
   },
   header: {
-    height: 200,
+    height: 220,
     backgroundColor: COLORS.primary,
     paddingTop: 40,
     alignItems: 'center',
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   },
   accountBox: {
     width: '50%',
-    height: 100,
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
 

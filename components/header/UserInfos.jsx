@@ -1,7 +1,7 @@
 import { Text, View,TouchableOpacity, Image } from "react-native";
-import icons from "../constants/icons";
-import { COLORS, FONTS } from "../constants/theme";
-import { styles } from "../css/styles";
+import icons from "../../constants/icons";
+import { COLORS, FONTS } from "../../constants/theme";
+import { styles } from "../../css/styles";
 
 export function UserInfos({user}) {
     return (
